@@ -1,0 +1,43 @@
+<div class='view' (scroll)="onScroll($event)">
+    <div class="nav-bar" [ngClass]="{'active' : scrolling == true}">
+        <div class="nav-items">
+           <button mat-flat-button>Home</button>
+           <button mat-flat-button>Skills</button>
+           <button mat-flat-button>Projects</button>
+           <button mat-flat-button [matMenuTriggerFor]="menu">Experience</button>
+           <mat-menu #menu="matMenu">
+               <button mat-menu-item>Professional</button>
+               <button mat-menu-item>Volunteer</button>
+           </mat-menu>
+           <button mat-flat-button>Resume</button>
+        </div>
+    </div>
+    <img src="../../assets/images/Design.svg" />
+    <div class="hero" *ngIf="info != null">
+        <div class="hero-name">
+            <p class="name">{{info[0]['name']}}</p>
+        </div>
+        <div class="hero-title">
+            <p class="title">{{info[0]['title']}}</p>
+        </div>
+        <div class="hero-actions">
+            <button mat-raised-button id="experience-action">View My Experience</button>
+            <button mat-raised-button id="project-action">View My Projects</button>
+        </div>
+    </div>
+    <div class="about">
+        <div class="section-title">
+            <p class="title">About Me</p>
+        </div>
+        <div class="about-desc">
+            <p>{{ about[0]['description'] }}</p>
+        </div>
+        <div class="education">
+            <div class="education-item">
+                <p class="school"></p>
+                <p class="degree"></p>
+            </div>
+        </div>
+    </div>
+</div>
+

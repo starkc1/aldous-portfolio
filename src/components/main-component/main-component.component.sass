@@ -1,0 +1,108 @@
+$background-color: #EEEEEE
+$dark-color: #303841
+$primary-color: #005689
+$text-color: #3A4750
+
+.view
+    height: 100%
+    width: 100%
+    position: relative
+    overflow-x: hidden
+    overflow-y: scroll
+    background-color: $background-color
+
+
+    .nav-bar
+        width: 100%
+        height: 50px
+        position: fixed
+        z-index: 999
+        top: 0
+        left: 0
+        right: 0
+        background: $background-color
+        transition: all 0.5s
+
+        .nav-items
+            height: 100%
+            // margin-left: 55%
+            width: 80%
+            margin: auto
+            display: flex
+            justify-content: flex-end
+
+            .mat-flat-button
+                background-color: $background-color
+                margin: 5px 0px
+                margin-right: 15px
+                font-weight: 200
+                padding: 0px 10px
+                transition: all 0.5s
+                border-radius: 0px
+                border-bottom: 0px
+            .mat-flat-button.active
+                color: $primary-color
+            .mat-flat-button:hover
+                border-bottom: 1px solid $primary-color
+                transition: all 0.5s
+    .nav-bar.active
+        box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)
+        transition: all 0.5s
+    img
+        position: absolute
+        height: 550px
+        top: 40px            
+        right: 0px
+    .hero
+        text-align: center
+        width: 100%
+        margin: auto
+        padding-top: 20%
+        height: 500px
+        
+        .hero-name
+            .name
+                color: $primary-color
+                font-weight: 400
+                letter-spacing: 10px
+                font-size: 55px
+        .hero-title
+            padding-top: 25px
+            .title
+                text-transform: uppercase
+                color: $text-color
+                font-weight: 200
+                letter-spacing: 5px
+                font-size: 28px
+        .hero-actions
+            padding-top: 25px
+            .mat-raised-button
+                width: 200px
+                font-weight: 200
+            #experience-action
+                margin-right: 10px
+                background: $primary-color
+                color: $background-color
+            #project-action
+                margin-left: 10px
+                background: $text-color
+                color: $background-color
+    
+    .section-title
+        border-bottom: 1px solid $primary-color
+        .title 
+            text-transform: uppercase
+            padding: 0px
+            margin: 0px
+            margin-bottom: 5px
+            font-weight: 200
+            font-size: 20px
+    .about
+        padding: 0
+        margin-left: 10%
+        width: 50%
+        .about-desc
+            padding-top: 10px
+            font-weight: 300
+            font-size: 15px
+            line-height: 150%

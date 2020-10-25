@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "aldousgeorge-1c04a"
+  },
+  "targets": {
+    "aldousgeorge-1c04a": {
+      "hosting": {
+        "aldous-portfolio": [
+          "aldousgeorge-1c04a"
+        ]
+      }
+    }
+  }
+}
