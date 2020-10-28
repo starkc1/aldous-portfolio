@@ -25,7 +25,7 @@
             <button mat-raised-button id="project-action">View My Projects</button>
         </div>
     </div>
-    <div class="about">
+    <div class="about" *ngIf="about != null && education != null">
         <div class="section-title">
             <p class="title">About Me</p>
         </div>
@@ -33,9 +33,9 @@
             <p>{{ about[0]['description'] }}</p>
         </div>
         <div class="education">
-            <div class="education-item">
-                <p class="school"></p>
-                <p class="degree"></p>
+            <div class="education-item" *ngFor="let item of education">
+                <p class="school">{{ item['school'] }}</p>
+                <p class="degree">{{ item['degree'] }} {{ item['year'] }}</p>
             </div>
         </div>
     </div>

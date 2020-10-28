@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../../services/data.service'; 
+import * as _ from 'lodash';
 
 @Component({
   selector: 'app-main-component',
@@ -30,9 +31,16 @@ export class MainComponent implements OnInit {
 
     this.dataService.getEducation.subscribe(
       response => {
-        this.education = response;
+        this.education = this.sortBy(response, 'year');
       }
     )
+  }
+
+  sortBy(array, field) {
+    var newArray;
+
+    newArray = _.orderBy(array, [field], ['desc'])
+    return newArray;
   }
 
   scrolling = false; 
