@@ -8,17 +8,31 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { DataService } from '../services/data.service';
+import { LoginService } from './../services/login.service';
 import { MainComponent } from '../components/main-component/main-component.component';
+import { AdminComponent } from "../components/admin-component/admin-component";
 
-
+//ANGULAR MATERIAL IMPORTS
 import { MatButtonModule } from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
+import { MatCardModule } from '@angular/material/card';
+import { MatRippleModule } from '@angular/material/core';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input'; 
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatTableModule } from '@angular/material/table';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+// import { MatListModule } from '@angular/material/list';
+
+
 import { environment } from 'src/environments/environment';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MainComponent
+    MainComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,
@@ -27,10 +41,19 @@ import { environment } from 'src/environments/environment';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
     MatButtonModule,
-    MatMenuModule
+    MatMenuModule,
+    MatCardModule,
+    MatRippleModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatGridListModule,
+    MatTabsModule,
+    MatTableModule,
+    MatCheckboxModule
   ],
   providers: [
-    DataService
+    DataService,
+    LoginService
   ],
   bootstrap: [AppComponent]
 })

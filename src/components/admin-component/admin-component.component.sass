@@ -1,0 +1,72 @@
+$background-color: #EEEEEE
+$dark-color: #303841
+$primary-color: #005689
+$red-color: #ba000d
+$text-color: #3A4750
+
+    
+.view
+    height: 100vh
+    width: 100vw
+    .login
+        height: 100%
+        width: 100%
+        .loginCard
+            width: 40%
+            margin: auto
+            margin-top: 10%
+            background-color: $background-color
+            box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)
+            .mat-card-title
+                font-size: 20px
+                font-weight: 300
+                color: $primary-color
+            .mat-form-field
+                width: 100%
+            .mat-raised-button
+                width: 96%
+                margin-left: 10px
+                background: $primary-color
+                color: $background-color
+    .addInfo
+        height: 100vh
+        .tabContent
+            width: 100%
+            padding-top: 20px
+            height: 90vh
+            .mat-table 
+                width: 90%
+                max-height: 50%
+                margin: auto
+                .mat-column-Select
+                    width: 5%
+                th
+                    text-align: start
+                    font-weight: 300
+                    cursor: pointer
+            .inputs
+                padding-top: 40px
+                width: 50%
+                margin: auto
+                text-align: center
+                .mat-card
+                    max-height: 50%
+                .mat-card-title
+                    font-size: 20px
+                    font-weight: 300
+                    color: $primary-color
+                .mat-form-field
+                    width: 100%
+            .actions
+                padding-top: 40px
+                width: 100%
+                text-align: center
+                #delete
+                    margin-left: 10px
+                    background: $red-color
+                    color: $background-color
+                #addNew
+                    margin-left: 10px
+                    background: $primary-color
+                    color: $background-color
+            

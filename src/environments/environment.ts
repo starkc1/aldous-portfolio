@@ -6,9 +6,9 @@ export const environment = {
   production: false,
   firebase: {
     apiKey: 'AIzaSyA15QSHU_nEEmrWapg74hz1C6cJDm9uvlE',
-    authDomain: 'aldousgeorge-1c04a.firebaseapp.com',
-    databaseURL: 'https://aldousgeorge-1c04a.firebaseio.com',
-    projectId: 'aldousgeorge-1c04a',
+    authDomain: 'aldous-george.firebaseapp.com',
+    databaseURL: 'https://aldous-george.firebaseio.com',
+    projectId: 'aldous-george',
     storageBucket: '<your-storage-bucket>',
     messagingSenderId: '<your-messaging-sender-id>'
   }

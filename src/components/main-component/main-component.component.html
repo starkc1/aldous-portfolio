@@ -1,5 +1,8 @@
 <div class='view' (scroll)="onScroll($event)">
     <div class="nav-bar" [ngClass]="{'active' : scrolling == true}">
+        <div class="nav-title">
+            <p class='title' [ngClass]="{'active' : showTitle == true}">{{ info[0]['name'] }}</p>
+        </div>
         <div class="nav-items">
            <button mat-flat-button>Home</button>
            <button mat-flat-button>Skills</button>
@@ -25,6 +28,7 @@
             <button mat-raised-button id="project-action">View My Projects</button>
         </div>
     </div>
+
     <div class="about" *ngIf="about != null && education != null">
         <div class="section-title">
             <p class="title">About Me</p>
@@ -37,6 +41,101 @@
                 <p class="school">{{ item['school'] }}</p>
                 <p class="degree">{{ item['degree'] }} {{ item['year'] }}</p>
             </div>
+        </div>
+    </div>
+
+    <div class='skills'>
+        <div class='section-title'>
+            <p class='title'>Skills</p>
+        </div>
+        <div class="skill-list" *ngFor="let skill of skills">
+            <div class='skill-major'>
+                <div class='bullet-point'></div>
+                <p class="title">{{ skill.skill }}</p>
+            </div>
+            <div class='skill-minor' *ngFor="let item of skill.items">
+                <div class="bullet-point"></div>
+                <p class="title">{{ item }}</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="projects">
+        <div class="section-title">
+            <p class='title'>Projects</p>
+        </div>
+        <div class='project-list'>
+            <mat-grid-list cols='3' rowHeight='325px' gutterSize="20px">
+                <mat-grid-tile *ngFor="let project of projects">
+                    <mat-card matRipple class='project'>
+                        <mat-card-header>
+                            <mat-card-title>{{ project.title }}</mat-card-title>
+                        </mat-card-header>
+                        <img mat-card-image src={{project.images[0]}}>
+                        <mat-card-content>
+                            <p>{{ project.shortDescription }}</p>
+                        </mat-card-content>
+                    </mat-card>
+                </mat-grid-tile>
+            </mat-grid-list>
+        </div>
+    </div>
+
+    <div class='professional'>
+        <div class="section-title">
+            <p class='title'>Professional Experience</p>
+        </div>
+        <div class='experience-list'>
+            <div class="experience-item" *ngFor="let item of profExperience">
+                <p class='timeframe'>{{ item.timeframe }}</p>
+                <div class="company">
+                    <p class='name'>{{ item.company }}</p>
+                    <p class='location'>{{ item.location }}</p>
+                </div>
+                <p class='position'>{{ item.position }}</p>
+                <div class="position-infos">
+                    <div class="position-info" *ngFor="let info of item.infos">
+                        <div class="bullet-point"></div>
+                        <p class="info">{{ info }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class='volunteer'>
+        <div class='section-title'>
+            <p class='title'>Volunteer Experience</p>
+        </div>
+        <div class="experience-list">
+            <div class='experience-item' *ngFor="let item of volExperience">
+                <p class='timeframe'>{{ item.timeframe }}</p>
+                <div class="company">
+                    <p class='name'>{{ item.company }}</p>
+                    <p class='location'>{{ item.location }}</p>
+                </div>
+                <p class='position'>{{ item.position }}</p>
+                <div class="position-infos">
+                    <div class="position-info" *ngFor="let info of item.infos">
+                        <div class="bullet-point"></div>
+                        <p class="info">{{ info }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="footer-website">
+            <p class='title'>Portfolio For Aldous George</p>
+        </div>
+        <div class="footer-version">
+            <p class="title">Version 0.5</p>
+            <p class="title">Angular 9</p>
+            <p class="title">Google Firebase</p>
+        </div>
+        <div class="footer-copyright">
+            <p class="title">Copyright @TierZeroStudios 2021</p>
         </div>
     </div>
 </div>

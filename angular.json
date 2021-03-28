@@ -130,5 +130,8 @@
       }
     }
   },
-  "defaultProject": "aldous-portfolio"
+  "defaultProject": "aldous-portfolio",
+  "cli": {
+    "analytics": "e1782bca-7117-4c31-93ba-3263099da308"
+  }
 }

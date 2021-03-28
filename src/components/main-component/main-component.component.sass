@@ -22,18 +22,36 @@ $text-color: #3A4750
         right: 0
         background: $background-color
         transition: all 0.5s
-
+        display: flex        
+        .nav-title
+            height: 80%
+            justify-content: flex-start
+            padding-top: 14px
+            margin-left: 10%
+            width: 10%
+            .title
+                height: 100%
+                transition: all 0.5s
+                padding: 0
+                margin: 0
+                font-weight: 500
+                font-size: 18px
+                color: $primary-color
+                opacity: 0
+            .title.active
+                opacity: 1
+                transition: all 0.5s
         .nav-items
             height: 100%
             // margin-left: 55%
-            width: 80%
+            width: 50%
             margin: auto
             display: flex
             justify-content: flex-end
 
             .mat-flat-button
                 background-color: $background-color
-                margin: 5px 0px
+                margin: 0px 0px
                 margin-right: 15px
                 font-weight: 200
                 padding: 0px 10px
@@ -104,6 +122,8 @@ $text-color: #3A4750
         padding: 0
         margin-left: 10%
         width: 50%
+        min-height: 400px
+        height: auto
         .about-desc
             padding-top: 10px
             font-weight: 300
@@ -123,5 +143,206 @@ $text-color: #3A4750
                     padding: 0
                     margin: 0
                     font-weight: 200
+    .skills
+        padding: 0
+        margin-left: 10%
+        width: 50%
+        height: auto
+        min-height: 400px
+        margin-bottom: 50px
 
-    
+        .skill-list
+            margin-top: 20px
+            .skill-major
+                padding: 0
+                margin: 0
+                height: 20px
+                display: flex
+                .bullet-point
+                    width: 30px
+                    height: 8px
+                    border-radius: 10px
+                    background-color: $primary-color
+                    margin-top: 5px
+                    margin-right: 10px
+                .title
+                    font-weight: 200
+                    font-size: 15px
+            .skill-minor
+                padding: 0
+                margin: 0
+                margin-left: 30px
+                margin-top: 5px
+                height: 20px
+                display: flex
+                .bullet-point
+                    width: 20px
+                    height: 8px
+                    border-radius: 10px
+                    background-color: $primary-color
+                    margin-top: 5px
+                    margin-right: 10px
+                .title
+                    font-weight: 200
+    .projects
+        padding: 0
+        margin-left: 10%
+        width: 50%
+        height: auto
+        min-height: 300px
+        margin-bottom: 50px
+
+        .project-list
+            width: 140%
+            height: 500px
+            margin-top: 20px
+   
+            .project
+                height: 80%
+                max-width: 400px
+                background-color: $background-color
+                cursor: pointer
+                box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)
+                .mat-card-title
+                    font-size: 17px
+                    color: $primary-color
+                .mat-card-image
+                    opacity: .75
+                    padding-top: 10px
+                    height: 170px!important
+                .mat-card-content
+                    margin-top: 200px
+
+
+            .project:hover
+                box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)
+    .professional
+        padding: 0
+        margin-left: 10%
+        width: 50%
+        height: auto
+        min-height: 400px
+        margin-bottom: 50px
+        .experience-list
+            width: 140%
+            height: 500px
+            margin-top: 20px
+            .experience-item
+                width: 75%
+                margin-bottom: 30px
+                .timeframe
+                    letter-spacing: 5px
+                    font-size: 18px
+                .company
+                    margin-left: 15px
+                    display: flex
+                    .name
+                        color: $primary-color
+                        font-size: 16px
+                    .location
+                        margin-left: 10px
+                        font-size: 15px
+                        opacity: .5
+                .position
+                    margin-left: 16px
+                    margin-top: -10px
+                    opacity: .75
+                .position-infos
+                    width: 75%
+                    .position-info
+                        padding: 0
+                        margin: 0
+                        margin-left: 15px
+                        margin-top: 5px
+                        height: 20px
+                        display: flex
+                        .bullet-point
+                            width: 15px
+                            height: 8px
+                            border-radius: 10px
+                            background-color: $primary-color
+                            margin-top: 5px
+                            margin-right: 10px
+                        .info
+                            font-size: 13px                           
+    .volunteer
+        padding: 0
+        margin-left: 10%
+        width: 50%
+        height: auto
+        min-height: 400px
+        margin-bottom: 50px
+        .experience-list
+            width: 140%
+            height: 500px
+            margin-top: 20px
+            .experience-item
+                width: 75%
+                margin-bottom: 30px
+                .timeframe
+                    letter-spacing: 5px
+                    font-size: 18px
+                .company
+                    margin-left: 15px
+                    display: flex
+                    .name
+                        color: $primary-color
+                        font-size: 16px
+                    .location
+                        margin-left: 10px
+                        font-size: 15px
+                        opacity: .5
+                .position
+                    margin-left: 16px
+                    margin-top: -10px
+                    opacity: .75
+                .position-infos
+                    width: 75%
+                    .position-info
+                        padding: 0
+                        margin: 0
+                        margin-left: 15px
+                        margin-top: 5px
+                        height: 20px
+                        display: flex
+                        .bullet-point
+                            width: 15px
+                            height: 8px
+                            border-radius: 10px
+                            background-color: $primary-color
+                            margin-top: 5px
+                            margin-right: 10px
+                        .info
+                            font-size: 13px 
+    .footer
+        display: flex
+        width: 100%
+        height: 100px
+        padding: 20px
+        color: $background-color
+        background-color: $primary-color
+        .footer-website
+            width: 33%
+            text-align: center
+            padding-top: 50px
+            .title
+                margin: 0
+                padding: 0
+        .footer-version
+            width: 33%
+            text-align: center
+            padding-top: 25px
+            .title
+                margin: 0
+                padding: 0
+        .footer-copyright
+            width: 33%
+            text-align: center
+            padding-top: 50px
+            .title
+                margin: 0
+                padding: 0
+
+
+
+

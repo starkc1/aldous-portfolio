@@ -16,6 +16,10 @@ export class MainComponent implements OnInit {
   info : Array<any>;
   about : Array<any>;
   education : Array<any>;
+  skills : Array<any>;
+  projects : Array<any>;
+  profExperience : Array<any>;
+  volExperience : Array<any>;
   ngOnInit(): void {
     this.dataService.getInfo.subscribe(
       response => {
@@ -34,6 +38,31 @@ export class MainComponent implements OnInit {
         this.education = this.sortBy(response, 'year');
       }
     )
+
+    this.dataService.getSkills.subscribe(
+      response => {
+        this.skills = response;
+      }
+    )
+
+    this.dataService.getProjects.subscribe(
+      response => {
+        console.log(response);
+        this.projects = response;
+      }
+    )
+
+    this.dataService.getProffessionalExperience.subscribe(
+      response => {
+        this.profExperience = response;
+      }
+    )
+
+    this.dataService.getVolunteerExperience.subscribe(
+      response => {
+        this.volExperience = response;
+      }
+    )
   }
 
   sortBy(array, field) {
@@ -43,13 +72,18 @@ export class MainComponent implements OnInit {
     return newArray;
   }
 
-  scrolling = false; 
+  scrolling = false;
+  showTitle = false;
   onScroll($event) {
     var scrollTop = $event.srcElement.scrollTop;
 
     if (scrollTop == 0) {
       this.scrolling = false;
     } else {
+      if (scrollTop > 200)
+        this.showTitle = true;
+      else
+        this.showTitle = false;
       this.scrolling = true;
     }
   }
